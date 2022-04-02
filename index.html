@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+   <html lang="en" dir="ltr">
+   <head>
+   <meta charset="utf-8">
+   <title>battery</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="icon" href="favicon.ico">
+   </head>
+   <body>
+   <button class="btn" onclick="stopInterval()"> Stop Counting</button>
+   
+   <p id="demo">0</p>
+  <p id="dem">%</p>
+   
+   
+   <script type="text/javascript">
+    
+   var x =0;
+   
+   var myInterval = setInterval(function() {
+   // adds 1 to x
+   x += 1;
+   document.getElementById("demo").innerHTML = x;
+   }, 12000);
+   
+   function stopInterval() {
+   clearInterval(myInterval);
+   }
+   </script>
+   <div class="battery">
+   <div class="battery-head"></div>
+   <div class="battery-body">
+   <i class="fa fa-bolt"></i>
+   <div class="charge"></div>
+   </div>
+   </div>
+   </body>
+   </html>
